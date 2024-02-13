@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Traveller Tools: UWP Decoder</title>
+        <link rel="stylesheet" href="uwp.css">
+    </head>
+    <body>
+        <h1>Traveller Tools: UWP Decoder</h1>
+        <div class="container">
+            <div>
+                <input id="uwp-code" type="text" onkeypress="codeKeypress(event)"
+                    value="0103	Kashmiir	A9687BB-C	Ag Ri Cp Pz	{ 4 }	(D6E+5)	[9B7E]	BCF	N	A	313	10	ImDv	M1 V M2 V"
+                    testvalue="Cogri 0101 CA6A643-9 N Ri Wa A">
+                <button id="uwp-button" onclick="codeDecode()">Decode</button>
+            </div>
+            <table>
+                <tr>
+                    <th>World</th><td id="world"></td><td></td>
+                </tr>
+                <tr>
+                    <th>Map</th><td id="map"></td><td></td>
+                </tr>
+                <tr>
+                    <th>Starport</th><td id="starport"></td><td id="starportX"></td>
+                </tr>
+                <tr>
+                    <th>Size</th><td id="size"></td><td id="sizeX"></td>
+                </tr>
+                <tr>
+                    <th>Atmosphere</th><td id="atmo"></td><td id="atmoX"></td>
+                </tr>
+                <tr>
+                    <th>Hydrography</th><td id="hydro"></td><td id="hydroX"></td>
+                </tr>
+                <tr>
+                    <th>Population</th><td id="pop"></td><td id="popX"></td>
+                </tr>
+                <tr>
+                    <th>Government</th><td id="gov"></td><td id="govX"></td>
+                </tr>
+                <tr>
+                    <th>Law Level</th><td id="law"></td><td id="lawX"></td>
+                </tr>
+                <tr>
+                    <th>Tech Level</th><td id="tech"></td><td id="techX"></td>
+                </tr>
+                <tr>
+                    <th>Bases</th><td id="bases"></td><td id="basesX"></td>
+                </tr>
+                <tr>
+                    <th>Trade</th><td id="trade"></td><td id="tradeX"></td>
+                </tr>
+                <tr>
+                    <th>Zone</th><td id="zone"></td><td id="zoneX"></td>
+                </tr>
+            </table>
+            <p>Examples:
+            <pre>0103 Kashmiir A9687BB-C Ag Ri Cp Pz { 4 } (D6E+5) [9B7E] BCF N A 313 10 ImDv M1 V M2 V
+
+Cogri 0101 CA6A643-9 N Ri Wa A
+
+A95A8DB-B</pre>
+            <hr>
+            <p>Version 1.0, updated 2024-02-13. Please report any issues to the <a href="https://github.com/nikodemus/traveller-tools/issues">traveller-tools bug tracker</a>.
+            <br>
+        </div>
+        <script src="uwp.js"></script>
+    </body>
+</html>
